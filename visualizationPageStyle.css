@@ -31,6 +31,7 @@ body {
 
 .VisualizationMainPage #algoControlSection
 {
+	font-family: "Nunito", sans-serif;
 	background: #ffffff; 
 	color:#000000; 
 
@@ -39,8 +40,9 @@ body {
 
 .VisualizationMainPage #generalAnimationControlSection
 {
-	background: #DDEEDD; 
-	color:#006600; 
+	font-family: "Nunito", sans-serif;
+	background: #ffffff;; 
+	color:#000000; 
 
 }
 

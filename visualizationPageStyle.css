@@ -31,7 +31,7 @@ body {
 
 .VisualizationMainPage #algoControlSection
 {
-	background: #DDEEDD; 
+	background: #ffffff; 
 	color:#000000; 
 
 }
@@ -45,7 +45,8 @@ body {
 }
 
 .VisualizationMainPage  #header1 { 
-	background: #0011ff; 
+	font-family: "Nunito", sans-serif;
+	background: #4154f1; 
 	color:#ffffff;
 	padding: 0 10px 0 20px; 
   
@@ -53,11 +54,13 @@ body {
  
 .VisualizationMainPage #header1  A:visited 
 	  { text-decoration:none;
+		font-family: "Nunito", sans-serif;
         color:#ffffff; 
 	   }
 	   
 	   
 .VisualizationMainPage #header1 h1 {
+	font-family: "Nunito", sans-serif;
 	margin: 0; 
 	padding: 10px 0; 
 	}

@@ -186,41 +186,6 @@
           </div>
           
         </div>
-
-
-        <!-- <header class="section-header">
-          <h2>Our Values</h2>
-          <p>Odit est perspiciatis laborum et dicta</p>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/values-1.png" class="img-fluid" alt="">
-              <h3>Ad cupiditate sed est odio</h3>
-              <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/img/values-2.png" class="img-fluid" alt="">
-              <h3>Voluptatem voluptatum alias</h3>
-              <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="600">
-              <img src="assets/img/values-3.png" class="img-fluid" alt="">
-              <h3>Fugit cupiditate alias nobis.</h3>
-              <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
-            </div>
-          </div>
-
-        </div> -->
-
       </div>
 
     </section><!-- End Values Section -->
@@ -754,155 +719,97 @@
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
 
-      <div class="container" data-aos="fade-up">
+      
 
         <header class="section-header">
-          <h2>Portfolio</h2>
-          <p>Check our latest work</p>
+          <h2>BST</h2>
+          <p>Here is how BST works!</p>
         </header>
+        <div><head>
+		
+          <title>
+            Binary Search Tree Visualization
+          </title>
+          
+          <!-- css sheet for how the page is laid out -->
+          
+          <link rel="stylesheet" href="visualizationPageStyle.css">
+            
+            
+          <!-- jqueury stuff.  Only used for the animation speed slider. -->
+          <link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">
+              
+          <script src="ThirdParty/jquery-1.5.2.min.js"></script>
+          <script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+              
+          <!-- Javascript for the actual visualization code -->
+          <script type = "application/javascript" src = "AnimationLibrary/CustomEvents.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/UndoFunctions.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/AnimatedObject.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/AnimatedLabel.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/AnimatedCircle.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/AnimatedRectangle.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/AnimatedLinkedList.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/HighlightCircle.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/Line.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/ObjectManager.js"> </script>
+          <script type = "application/javascript" src = "AnimationLibrary/AnimationMain.js"> </script>
+          <script type = "application/javascript" src = "AlgorithmLibrary/Algorithm.js"> </script>
+          <script type = "application/javascript" src = "AlgorithmLibrary/BST.js"> </script> 
+              
+            
+         </head> 
+        
+        <body onload="init();" class="VisualizationMainPage">
+          
+          <div id = "container">
+            
+            <div id="header">  
+              <h1>Binary Search Tree</h1>
+            </div>
+            
+            <div id = "mainContent"> 
+              
+              <div id = "algoControlSection">
+                <!-- Table for buttons to control specific animation (insert/find/etc) -->
+                <!-- (filled in by javascript code specific to the animtion) -->
+                <table id="AlgorithmSpecificControls"> </table> 
+              </div>
+              
+                <!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
+                        
+              <canvas id="canvas" width="1000" height="500"></canvas>
+              <div id = "generalAnimationControlSection">
+                <!-- Table for buttons to control general animation (play/pause/undo/etc) ->
+                <!-- (filled in by javascript code, specifically AnimationMain.js)  -->
+      
+                <table id="GeneralAnimationControls">  </table>		
+              </div>
+              
+            </div> <!-- mainContent -->
+            
+            <div id="footer">  
+              <p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+            </div>
+      
+          </div><!-- container -->
+        </body></div>
+        
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
+
+       
+
+      
+         
+
+          
+
+          
         </div>
 
-        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      
+     
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
 
     </section><!-- End Portfolio Section -->
 

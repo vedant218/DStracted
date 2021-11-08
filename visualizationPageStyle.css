@@ -112,11 +112,7 @@ body {
 
 
 
-.VisualizationMainPage #footer { 
-	padding: 0 10px;
-    background: #006633; 
-	color:#ffcc33;
-} 
+
 .VisualizationMainPage #footer p {
 	margin: 0; 	padding: 10px 0; 
 }
